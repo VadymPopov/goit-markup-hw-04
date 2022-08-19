@@ -7,6 +7,7 @@
     --primary-text-color: #757575;
     --accent-color: #2196F3;
 
+
 }
 
                     /*Global styles body*/
@@ -17,6 +18,10 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
 
+}
+
+img {
+    display: block;
 }
 
 h1,
@@ -115,8 +120,6 @@ p {
 .link-mail:focus,
 .link-number:hover,
 .link-number:focus,
-.link-address:hover,
-.link-address:focus,
 .item .contact:hover,
 .item .contact:focus,
 .accent{
@@ -173,7 +176,9 @@ align-items: center;
     url(../images/hero-img.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
+
 .hero-title{
     margin-top: 0;
     margin-bottom: 30px;
@@ -201,6 +206,9 @@ align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
+
+    min-width: 216px;
+    min-height: 50px;
 }
 .main-button:hover,
 .main-button:focus{
@@ -226,9 +234,13 @@ align-items: center;
 
 .icon-skills {
     background-color: var(--sec-background-color);
-    padding: 25px 100px;
     margin-bottom: 30px;
     border-radius: 4px;
+
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .skills-title {
@@ -366,9 +378,13 @@ align-items: center;
 
 .client-link {
     color:#AFB1B8;
-    padding: 16px 32px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    width: 170px;
 }
 
 .client-link:hover,
@@ -521,13 +537,15 @@ align-items: center;
 }
 
 .contain-item {
-    flex-basis: calc(100% / 3 - 30px);
+    width: calc((100% - 90px) / 3);
     margin-left: 30px;
     margin-top: 30px;
-    border-bottom: 1px solid #EEEE;
 }
-
-.contain-item:hover {
+.contain-link {
+    display: block;
+}
+.contain-link:hover,
+.contain-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -548,4 +566,7 @@ align-items: center;
 
 .content {
     padding: 20px 24px;
+    border-bottom: 1px solid #EEEE;
+    border-left: 1px solid #EEEE;
+    border-right: 1px solid #EEEE;
 }
